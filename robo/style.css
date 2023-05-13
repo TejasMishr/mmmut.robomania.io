@@ -1,0 +1,533 @@
+.navcard-container {
+  display: flex;
+  position: relative;
+  background: #00000057;
+  padding: 0 2rem;
+  z-index: 1000;
+  }
+  
+  .navcard-left {
+  display: flex;
+  }
+  
+  .navcard-left h1 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 1rem;
+  }
+  
+  .navcard-right ul {
+  display: flex;
+  position: absolute;
+  right: 0;
+  flex-direction: row;
+  list-style-type: none;
+  }
+  
+  .navcard-right a {
+  color: var(--pure);
+  font-size: 1.3rem;
+  margin: 1.5rem;
+  text-decoration: none;
+  }
+  
+  .navcard-right a:hover {
+  color: aqua;
+  }
+  
+  .navcard-right ul li {
+  padding: 1rem;
+  }
+  
+  .mob-menubar {
+  display: none;
+  }
+  
+  @media only screen and (max-width: 480px) {
+  .mob-menubar {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  }
+  
+  .mob-menubar i {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 1rem;
+  font-size: 2.5rem;
+  z-index: 1000;
+  }
+  
+  .navcard-left h1 {
+  display: none;
+  }
+  
+  .navcard-right ul {
+  background-color: #01001e;
+  flex-direction: column;
+  top: 60px;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 20px;
+  text-align: center;
+  }
+  
+  .navcard-right a {
+  font-size: 1rem;
+  margin: 0;
+  }
+  
+  .navcard-right a:hover {
+  color: white;
+  }
+  
+  .navcard-right ul li {
+  padding: 0;
+  }
+  
+  .navcard-ul > li {
+  text-align: center;
+  list-style: none;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background: linear-gradient(0deg, #0deaf60c 0%, #0deaf66e 100%);
+  box-shadow: inset 2px 2px 5px #0decf6;
+  position: relative;
+  transform: skewX(25deg);
+  backdrop-filter: blur(16px);
+  }
+  
+  .navcard-ul > li:hover {
+  background: linear-gradient(0deg, #0deaf600 0%, #0deaf61d 100%);
+  }
+  
+  .navcard-ul a {
+  text-align: center;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  }
+  
+  .navcard-ul li:hover {
+  background: linear-gradient(0deg, #0deaf600 0%, #0deaf61d 100%);
+  }
+  
+  .navcard-ul > li > a {
+  transform: skewX(-25deg);
+  padding: 0.7rem 2rem;
+  }
+  
+  .active-mobmenu {
+  display: none;
+  }
+  }
+
+
+  .eventPage-container {
+    background: #000000 url("/robo/parallexbg.png");
+    color: white;
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .events-landing {
+    position: relative;
+    height: 100vh;
+    color: white;
+  }
+  .eventpage-section{
+    padding-bottom: 4rem;
+  }
+  
+  .events-items {
+    position: absolute;
+    top: 10%;
+    width: 70%;
+    padding: 1rem;
+  }
+  
+  .events-items img {
+    width: 1024px;
+  }
+  
+  .robo-para{
+    margin-top:4rem;
+    margin-left:2rem;
+  }
+  
+  .rc-robot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .btn-robomania {
+    color: #ff0000;
+    background: #fff;
+    margin:2rem 4rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.4rem 4rem;
+    display: inline-block;
+    transform: skew(15deg);
+  }
+  
+  .btn-robomania > span {
+    display: inline-block;
+    transform: skew(-15deg);
+  }
+  
+  .landing-details {
+    display: flex;
+    position: absolute;
+    bottom: 4rem;
+    left: 2rem;
+  }
+  
+  .landing-icons {
+    margin-right: 2rem;
+    padding: 1rem;
+  }
+  
+  .rb-events {
+    position: relative;
+    min-height: 100vh;
+    padding: 6rem;
+    margin-top: 5rem;
+  }
+  
+  .rb-events h2 {
+    z-index: 2;
+    font-family: "Asul", sans-serif;
+    font-size: 8rem;
+    text-decoration: solid;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--glow-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 0.3rem;
+    text-shadow: 1px 5px 15px var(--glow-color);
+  }
+  
+  .events-btn {
+    position: absolute;
+    bottom: 20%;
+    left: 40%;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border: 0.2rem solid var(--glow-color2);
+    border-radius: 50%;
+    padding: 1.4rem;
+    -webkit-box-shadow: inset 0px 0px 0.3rem 0px var(--glow-color2),
+      0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color2),
+      0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color2),
+      0px 0px 0.5em 0px var(--glow-color2);
+  }
+  
+  .events-btn a {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--pure);
+  }
+  
+  .events-btn:hover{
+    background-color: #060a24ce;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .events-btn .laser-btn{
+    animation: circle 6s linear infinite;
+  }
+  
+  .register-btn{
+    padding: 1rem;
+  }
+  
+  
+  @keyframes circle{
+    100%{
+      transform:rotate(360deg);
+    }
+  }
+  
+  .rs-text {
+    position: absolute;
+    left: 10%;
+    top: 0%;
+  }
+  
+  .ls-img {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    border-width:8px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        var(--glow-color), 
+        rgba(0, 0, 0, 0)
+      )1 100%;
+  }
+  
+  .ls-text {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+  }
+  
+  .rs-img {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    border-width:8px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to top, 
+        var(--glow-color), 
+        rgba(0, 0, 0, 0)
+      )1 100%;
+  }
+  
+  
+  .rcevent-img{
+    width:55%;
+    height:60%;
+  }
+  
+  
+  /*************************************************************************** */
+  
+  
+  @media only screen and (max-width: 480px) {
+    .eventPage-container {
+      overflow-x: hidden;
+    }
+  
+  
+    .btn-robomania{
+      display: none;
+    }
+    
+    .rc-robot {
+      width: 100%;
+      height: 65%;
+      bottom: 59px;
+    }
+  
+    .rb-events h2 {
+      font-size: 3rem;
+      color: var(--glow-color);
+      -webkit-text-stroke-width: 0.12rem;
+      text-shadow: 1px 2px 9px var(--glow-color);
+    }
+  
+    .ls-img {
+      width: 80%;
+      height: 40%;
+    }
+  
+    .events-btn {
+      bottom: 32%;
+      left: 55%;
+    }
+  
+    .rs-img {
+      width: 80%;
+      height: 40%;
+    }
+  
+    .ls-text {
+      margin: 0 auto;
+      top: 0;
+    }
+    
+    
+    .events-items {
+      position: absolute;
+      top: 9%;
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .landing-details {
+      display: none;
+    }
+  
+    .events-items img {
+      width: 100%;
+    }
+  
+    .events-items p {
+      display: none;
+    }
+  
+  }
+  
+
+  @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Asul:wght@400;700&family=Open+Sans:wght@400;500&family=Ubuntu:wght@400;500;700&display=swap');
+
+  /* font-family: 'Black Ops One', cursive; */
+  /* font-family: 'Asul', sans-serif; */
+  /* font-family: 'Ubuntu', sans-serif;  */
+  /* font-family: 'Open Sans', sans-serif; */
+  
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+    
+  }
+
+  
+  :root{
+    --dark: #061924;
+    --pure: #fff;
+    --light: #2f87a0;
+    --grey: #b8cad0;
+    --light2: #4c9aab;
+    --fade: #2f6c7d;
+    --dark2: #0b3045;
+    --grey2:#454e53;
+    --green: #2a9474;
+    --lightg: #0decf6;
+    --darkg: #054c47;
+    --glow-color: hsl(186 100% 69%);
+    --glow-color2: hsl(57, 100%, 69%);
+    --glow-color3: hsl(0, 100%, 69%);
+    
+  }
+  
+  ::-webkit-scrollbar {
+    display:none;     
+  }
+  
+  h1,h2{
+    font-family:'Ubuntu', sans-serif;;
+    list-style-type: none;
+  }
+  
+  h3,h4,h5,p{
+    font-family: 'Open Sans', sans-serif;
+    list-style-type: none;
+  }
+  
+  section{
+    min-height: 100vh;
+  }
+  
+  html,body{
+    scroll-behavior:smooth;
+  }
+  
+  
+  
+  /* Mobile Phone */
+  @media only screen and (max-width: 480px){
+    body{
+      overflow-x: hidden;
+    }
+    section{
+      width: 100%;
+      overflow-x: hidden;
+    }
+      
+  }
+  /* 00009  NAVBAR  */
+  
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+     
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    top:2rem;
+    right: 2rem;
+    }
+    
+    /* Color/shape of burger icon bars */
+    .bm-burger-bars {
+      background: #fff;
+    }
+    
+    /* Color/shape of burger icon bars on hover*/
+    .bm-burger-bars-hover {
+      background: #0084a9;
+    }
+    
+    /* Position and sizing of clickable cross button */
+    .bm-cross-button {
+      height: 24px;
+      width: 24px;
+    }
+    
+    /* Color/shape of close button cross */
+    .bm-cross {
+      background: #bdc3c7;
+    }
+    
+    /*
+    Sidebar wrapper styles
+    Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+    */
+    .bm-menu-wrap {
+      position: fixed;
+      height: 100%;
+    }
+    
+    /* General sidebar styles */
+    .bm-menu {
+      background: #373a47;
+      padding: 2.5em 1.5em 0;
+      font-size: 1.15em;
+    }
+    
+    /* Morph shape necessary with bubble or elastic */
+    .bm-morph-shape {
+      fill: #373a47;
+    }
+    
+    /* Wrapper for item list */
+    .bm-item-list {
+      color: #b8b7ad;
+      padding: 0.8em;
+    }
+    
+    /* Individual item */
+    .bm-item {
+      display: inline-block;
+      color: #d1d1d1;
+    margin-bottom: 10px;
+    text-align: left;
+    text-decoration: none;
+    transition: color 0.2s;
+    }
+    .bm-item:hover {
+      color: #ffffff;
+    }
+  
+    /* Styling of overlay */
+    .bm-overlay {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  
+  
