@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Braah+One&family=Poppins:wght@400;700;900&family=Rubik&family=Ubuntu:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"   />
+  <script src="https://kit.fontawesome.com/674dd8e09c.js" crossorigin="anonymous"></script>
+  <title>Robotech</title>
+  <style>
+    body {
+      margin: 0px 0px;
+      padding: 0px 0px;
+      height: 100%;
+      width: 100%;
+  
+    }
+      
+
+    .back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-image: url("/home/img.png");
+      background-repeat: no-repeat;
+      background-size: cover;}
+
+
+    #canvas {
+      aspect-ratio: 1363 /3163;
+    background: #000000;
+    width: 100%;
+
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(180deg, #002326, #146a4fde, #02441f2e);
+      margin: 0px 321px;
+      height: 54px;
+      transform: skewX(30deg);
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-size: 28px;
+      margin: 0.8rem 6rem;
+      color: rgb(77, 255, 190);
+      transform: skewX(-30deg);
+      transition: transform 0.2s ease;
+    }
+
+    .nav a:hover {
+      transform: skewX(-14deg);
+      background-color: rgba(4, 176, 119, 0.386);
+      color: white;
+      box-shadow: 2px 1px 1px 1px white;
+
+    }
+
+    .back h1 {
+      margin: 16rem 0rem 2rem 32rem;
+      font-size: 101px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-shadow: 5px 0px 4px white;
+     
+    }
+    
+
+    .back h3 {
+      margin: 0rem 0rem 2rem 47.5rem;
+      font-size: 40px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-shadow: 2px 2px 6px white;
+    }
+
+    .foot {
+      display: flex;
+      position: relative;
+      top: 33%;
+      left: 0%;
+      font-size: 23px;
+    }
+
+    .foot a {
+      color: white;
+      margin: 0px 1px 0px 7px;
+      padding: 5px 11px;
+      text-decoration: none;
+      background-color: #25543d;
+      border: 2px solid;
+      transform: skewX(-11deg);
+    }
+
+    .foot1 {
+      display: flex;
+      position: relative;
+      top: 33.5%;
+      left: 0%;
+      font-size: 23px;
+    }
+
+    .foot1 a {
+      color: white;
+      margin: 0px -10px 0px 23px;
+      padding: 5px 11px;
+      text-decoration: none;
+      background-color: #25543d;
+      border: 2px solid;
+      transform: skewX(-11deg);
+    }
+
+    .about {
+      position: absolute;
+    top: 98%;
+    }
+
+    .about h1 {
+      margin: 11rem 0rem 2rem 42rem;
+      text-decoration: underline;
+      font-size: 101px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-shadow: 5px 4px 9px white;
+      
+      /* transition: transform 2s ease-in; */
+      
+    }
+    .about h1{
+      /* transform: scale(1.2); */
+      
+    }
+
+
+    .about h3 {
+      margin: 6rem 7rem 2rem 19.5rem;
+    font-size: 36px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 6px #0b92f1;
+    border: 2px solid white;
+    box-shadow: 7px 14px 21px #0e22a9ba;
+    padding: 4px 26px;
+    text-align: center;
+    /* border-radius: 58px; */
+    transform: skew(3deg, 3deg);
+    transition: transform 2s ease-in;
+    }
+    .about h3:hover{
+      transform: skew(-3deg, -3deg);
+    }
+
+    .about img {
+      display: inline-block;
+      height: 295px;
+      margin: 2rem 0rem 2rem 46rem;
+      width: auto;
+      border: 2px solid white;
+      border-radius: 62px;
+      box-shadow: 6px 10px 15px #6060ebf0;
+      transform: scale(0.8);
+      transition: transform 2s ease-in;
+    }
+    .about img:hover{
+      transform: scale(1.2);
+    }
+
+    .contact {
+      background: transparent;
+    min-height: 60vh;
+    position: absolute;
+    margin: 204px 21rem;
+    top: 321%;
+    }
+
+    .contact h2 {
+      text-align: center;
+      font-size: 53px;
+      color: white;
+
+    }
+
+    .contact .heading::after {
+      display: block;
+      font-size: 2.2rem;
+      color: blue;
+      content: "get in touch";
+    }
+
+    .contact .container {
+      max-width: 1050px;
+      width: 100%;
+      background: #fff;
+      border-radius: 1.5rem;
+      margin: 2rem 5rem;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact .container .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2.5rem 2rem;
+    }
+
+    .contact .content .image-box {
+      max-width: 60%;
+      margin-left: 4rem;
+    }
+
+    .contact .content .image-box img {
+      width: 100%;
+      height: 40rem;
+      position: relative;
+    }
+
+    .contact .content form {
+      width: 45%;
+      margin-right: 3.5rem;
+    }
+
+    form .form-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .form-group .field {
+      height: 50px;
+      display: flex;
+      position: relative;
+      margin: 1rem;
+      width: 100%;
+    }
+
+    form i {
+      position: absolute;
+      top: 50%;
+      left: 18px;
+      color: rgb(51, 51, 51);
+      font-size: 17px;
+      pointer-events: none;
+      transform: translateY(-50%);
+    }
+
+    form .field input,
+    form .message textarea {
+      width: 100%;
+      height: 100%;
+      outline: none;
+      padding: 0 16px 0 48px;
+      font-size: 16px;
+      font-family: "Poppins", sans-serif;
+      border-radius: 5px;
+      border: 1px solid rgb(51, 51, 51);
+      background: #e5ecfb;
+    }
+
+    .field input::placeholder,
+    .message textarea::placeholder {
+      color: rgb(51, 51, 51);
+    }
+
+    .field input:focus,
+    .message textarea:focus {
+      padding-left: 47px;
+      border: 2px solid rgb(115, 3, 167);
+    }
+
+    .field input:focus~i,
+    .message textarea:focus~i {
+      color: rgb(115, 3, 167);
+    }
+
+    form .message {
+      position: relative;
+      margin: 1rem;
+      width: 100%;
+    }
+
+    form .message i {
+      top: 25px;
+      font-size: 20px;
+      left: 15px;
+    }
+
+    form .message textarea {
+      min-height: 130px;
+      max-height: 230px;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 12px 20px 0 48px;
+    }
+
+    form .message textarea::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    form .button-area {
+      display: flex;
+      float: right;
+      flex-direction: row-reverse;
+    }
+
+    .button-area button {
+      color: #fff;
+      border: none;
+      outline: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 13px 25px;
+      background: #2506ad;
+      box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+      transition: 0.3s ease;
+      font-family: "Nunito", sans-serif;
+    }
+
+    .button-area button:hover {
+      background: #421cecf5;
+    }
+
+    .button-area span {
+      font-size: 17px;
+      padding: 1rem;
+      display: none;
+    }
+
+    .button-area button i {
+      position: relative;
+      top: 6px;
+      left: 2px;
+      font-size: 1.5rem;
+      transition: 0.3s;
+      color: #fff;
+    }
+
+    .button-area button:hover i {
+      left: 8px;
+    }
+
+    /* contact section media queries starts */
+    @media (max-width: 900px) {
+      .contact {
+        min-height: 70vh;
+      }
+
+      .contact .container {
+        margin: 3rem 0 2rem 0;
+      }
+
+      .contact .container .content {
+        padding: 18px 12px;
+      }
+
+      .contact .content .image-box {
+        display: none;
+      }
+
+      .contact .content form {
+        width: 100%;
+        margin-right: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="back" style="will-change: opacity, transform, -webkit-transform; opacity: 1; transform: scale(1);">  
+    <header>
+      <div class="nav">
+        <a href="">EVENT</a>
+        <a href="">WORKSHOP</a>
+        <a href="">GALLERY</a>
+
+      </div>
+    </header>
+    <h1>ROBOTICS CLUB</h1>
+    <h3>GORAKHPUR MMMUT</h3>
+    <section class="foot">
+      <a href="">CONTACT US</a>
+      <a href="">ABOUT US</a>
+    </section>
+    <section class="foot1">
+      <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #c8c9cb;"></i></a>
+      <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #a0a2a7;"></i></a>
+      <a href=""><i class="fa-brands fa-youtube fa-xl" style="color: #b7b7b8;"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin fa-xl" style="color: #cfd0d3;"></i></a>
+    </section>
+  </div>
+  <div class="about">
+    <h1>About us</h1>
+    <h3>Robotics club provides an opportunity for students to supplement their education with hands-on experience in
+      integration engineering. From the past 12 years we engage our students with active participation in various
+      workshops, contests and tutorials to develop their interest in Robotics.</h3>
+    <h3>The club carries forward its vision and ideas by continuously creating hotspots where pool of technical
+      knowledge meets via workshops and an annually organized event ROBOMANIA where the club members present events to
+      the students which require plethora of practical implementation of concepts. Our Vision mainly is to:-
+    </h3>
+    <img src="/img/rcian.178727dbf6c0b000446e.jpg" alt="" srcset="">
+    <h3>
+      The Club offers indispensible guidance, workshops and tutorials along with tools, equipments, components and
+      workspace. The family meets periodically to discuss over matters such as the management of the workspace,
+      workshops, projects and competitions. We welcome anyone, with or without prior knowledge, who wishes to be a part
+      of this fraternity.
+    </h3>
+    <h3>
+      We firmly believe in working in a planned, organized and disciplined manner that helps us in risk free management.
+      The proceedings of the club are all pre-planned and run smoothly according to the rules. Well defined goals, an
+      organized and disciplined work structure and motivated members are the features of the club that have helped the
+      club to grow to a level where we see it now. The club today is an active platform for students to display and
+      develop their practical machine building skills and knowledge.
+    </h3>
+  </div>
+  <section class="contact" id="contact">
+
+    <h2 class="heading"><i class="fas fa-headset"></i> Contact <span>Me</span></h2>
+
+    <div class="container">
+      <div class="content">
+        <div class="image-box">
+          <img draggable="false" src="/home/contact1.png" alt="">
+        </div>
+        <form id="contact-form">
+
+          <div class="form-group">
+            <div class="field">
+              <input type="text" name="name" placeholder="Name" required>
+              <i class='fas fa-user'></i>
+            </div>
+            <div class="field">
+              <input type="email" name="email" placeholder="Email" required>
+              <i class='fas fa-envelope'></i>
+            </div>
+            <div class="field">
+              <input type="number" name="phone" placeholder="Phone" required>
+              <i class='fas fa-phone-alt'></i>
+            </div>
+            <div class="message">
+              <textarea placeholder="Message" name="message" required></textarea>
+              <i class="fas fa-comment-dots"></i>
+            </div>
+          </div>
+          <div class="button-area">
+            <button type="submit">
+              Submit <i class="fa fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+      
+  </section>
+  <canvas id="canvas" height="2011"></canvas>
+
+  <script>
+    var canvas = document.getElementById("canvas"),
+      ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    var stars = [], // Array that contains the stars
+      FPS = 20, // Frames per second
+      x = 200, // Number of stars
+      mouse = {
+        x: 0,
+        y: 0
+      };  // mouse location
+
+    // Push stars to array
+
+    for (var i = 0; i < x; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1 + 1,
+        vx: Math.floor(Math.random() * 50) - 25,
+        vy: Math.floor(Math.random() * 50) - 25
+      });
+    }
+
+    // Draw the scene
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.globalCompositeOperation = "lighter";
+
+      for (var i = 0, x = stars.length; i < x; i++) {
+        var s = stars[i];
+
+        ctx.fillStyle = "#fff";
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = 'black';
+        ctx.stroke();
+      }
+
+      ctx.beginPath();
+      for (var i = 0, x = stars.length; i < x; i++) {
+        var starI = stars[i];
+        ctx.moveTo(starI.x, starI.y);
+        if (distance(mouse, starI) < 150) ctx.lineTo(mouse.x, mouse.y);
+        for (var j = 0, x = stars.length; j < x; j++) {
+          var starII = stars[j];
+          if (distance(starI, starII) < 150) {
+            //ctx.globalAlpha = (1 / 150 * distance(starI, starII).toFixed(1));
+            ctx.lineTo(starII.x, starII.y);
+          }
+        }
+      }
+      ctx.lineWidth = 0.05;
+      ctx.strokeStyle = 'white';
+      ctx.stroke();
+    }
+
+    function distance(point1, point2) {
+      var xs = 0;
+      var ys = 0;
+
+      xs = point2.x - point1.x;
+      xs = xs * xs;
+
+      ys = point2.y - point1.y;
+      ys = ys * ys;
+
+      return Math.sqrt(xs + ys);
+    }
+
+    // Update star locations
+
+    function update() {
+      for (var i = 0, x = stars.length; i < x; i++) {
+        var s = stars[i];
+
+        s.x += s.vx / FPS;
+        s.y += s.vy / FPS;
+
+        if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
+        if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
+      }
+    }
+
+    canvas.addEventListener('mousemove', function (e) {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    // Update and draw
+
+    function tick() {
+      draw();
+      update();
+      requestAnimationFrame(tick);
+    }
+
+    tick();
+  </script>
+</body>
+
+</html>
