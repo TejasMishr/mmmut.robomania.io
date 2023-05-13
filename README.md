@@ -6,7 +6,22 @@ Homepage
 
 The homepage of the website provides an overview of the society, including its mission, vision,Contact and values. It also includes a brief introduction to the members of the society and the events it hosts.
 
-Events
+
+https://github.com/TejasMishr/robomania/assets/113692600/ab39929e-af31-4805-862f-0deeaa4e87ad
+
+
+
+https://github.com/TejasMishr/robomania/assets/113692600/93d89e63-269a-443d-a822-e0d397736308
+
+
+
+
+
+
+https://github.com/TejasMishr/robomania/assets/113692600/e1a4300c-9f57-48e9-b8a6-2d05735e37f4
+
+
+Events:--
 
 The website includes a comprehensive list of the events conducted by the Robomania Society. These events range from robotics competitions to workshops and seminars. The event list also includes information about the dates, venues, and registration procedures.
 
