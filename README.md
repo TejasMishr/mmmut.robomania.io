@@ -1,6 +1,6 @@
 Robomania Society Website
 
-This is the official website of the Robomania Society, a student-run organization dedicated to promoting robotics and automation. The website includes information about the society, its members, and the events it hosts.
+This is the official website clone of the Robomania Society, a student-run organization dedicated to promoting robotics and automation. The website includes information about the society, its members, and the events it hosts.
 
 Homepage
 
